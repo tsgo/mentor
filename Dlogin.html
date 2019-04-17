@@ -56,31 +56,36 @@
                     <input type="text" class="idn" placeholder="請輸入身分證字號">
                 </div>
                 <div>
-                    <button type="button" class="send" onClick="javascript:swal({
-  title: '注意！',
-  text: '一旦身份驗證成功後，即與您的Line帳號綁定。',
-  icon: 'info',
-  buttons: {
-  cancel: {
-    text: '取消',
-    value: false,
-    visible: true,
-    className: 'swal btnModify cancle',
-    closeModal: true,
-  },
-  confirm: {
-    text: '確定',
-    value: true,
-    visible: true,
-    className: 'swal btnModify confirm',
-    closeModal: true
-  }
-},
-}).then(function(){
-	if(arguments[0] == true){
-    	alert('送出表單');
-    }
-});"><span>確定</span></button>
+                    <button type="button" class="send" 
+                      onClick="
+                      javascript:swal({
+                          title: '注意！',
+                          text: '一旦身份驗證成功後，即與您的Line帳號綁定。',
+                          icon: 'info',
+                          buttons: {
+                          cancel: {
+                            text: '取消',
+                            value: false,
+                            visible: true,
+                            className: 'swal btnModify cancle',
+                            closeModal: true,
+                          },
+                          confirm: {
+                            text: '確定',
+                            value: true,
+                            visible: true,
+                            className: 'swal btnModify confirm',
+                            closeModal: true
+                          }
+                        },
+                        }).then(function(){
+                        	if(arguments[0] == true){
+                            	alert('送出表單');
+                            }
+                        });"
+                    >
+                    <span>確定</span>
+                    </button>
                 </div>
             </article>
         </form>
