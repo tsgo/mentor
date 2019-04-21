@@ -8,8 +8,10 @@ $(function () {
   });
 
   $('.threeMenu').click(function() {
-    $('.lastMenu_boxs').toggleClass ('showMenu');
+    // $('.lastMenu_boxs').toggleClass ('showMenu');
+    $(this).next().toggleClass ('showMenu');
   });
+
 
   // 手機選單模式，背景資訊鎖定
   function scrollLock () {
