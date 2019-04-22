@@ -371,6 +371,11 @@ label {
     background-color: white;
     margin-bottom: 10px;
     padding: 10px 15px;
+    @include clearfix();
+
+    &.mDown30 {
+      margin-bottom: 30px;
+    }
 
     &.noMDown{
       margin-bottom: 0;
@@ -381,7 +386,39 @@ label {
     }
 
     &.grayBbore {
-    border-bottom: 1px solid rgba(225, 234, 239, 1.00);
+      border-bottom: 1px solid rgba(225, 234, 239, 1.00);
+    }
+
+    .boxsL {
+      display: inline-block;
+      width: 50%;
+      float: left;
+      border: 1px solid rgba(187, 187, 187, .5);
+
+      img {
+        display: inline-block;
+        width: 100%;
+        max-width: 110px;
+      }
+
+    }
+
+    .boxsR {
+      display: inline-block;
+      width: 50%;
+      float: right;
+      padding-left: 10px; 
+    }
+
+    .work {
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 10px;
+
+      img {
+        display: inline-block;
+        width: 100%;
+      }
     }
   }
 }
@@ -466,6 +503,22 @@ label {
   }
 }
 
+.designText {
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555555;
+  text-align: left;
+  padding-bottom: 5px;
+
+  &.designText2 {
+    font-weight: 400;
+  }
+} 
+
+
+
 .noteOrange {
   display: inline-block;
   width: 100%;
@@ -544,6 +597,7 @@ a, button {
   &.bblue {
     background-color: rgba(0, 183, 234, 1.00);
     @include transition(all .3s);
+    text-decoration: none;
 
     &:hover, &:active {
       background-color: rgba(0, 183, 234, .8);
@@ -553,6 +607,7 @@ a, button {
   &.bpink {
     background-color: rgba(240, 87, 174, 1.00);
     @include transition(all .3s);
+    text-decoration: none;
 
     &:hover, &:active {
       background-color: rgba(240, 87, 174, .8);
@@ -566,6 +621,10 @@ a {
   outline: 0;
   cursor: pointer;
 
+  &.apad {
+    padding: 0;
+  }
+  
   &:hover, &:active {
     text-decoration: none;
   }
