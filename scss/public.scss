@@ -54,6 +54,37 @@ html {
 }
 
 
+.blackBoxs {
+  display: inline-block;
+  width: 300px;
+  height: 50vh;
+  z-index: 11;
+  top: 5%;
+  left:  5%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0);
+  @include transition(background-color .3s);
+
+  &.bboxshow {
+    background-color: rgba(255, 255, 255, 1.00);
+  }
+}
+.blackok {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left:  -100%;
+  position: absolute;
+  background-color: rgba(49, 57, 64, .5);
+
+  &.bshow {
+    left: 0;
+  }
+}
+
+
 
 // 側選單・開始
 .menu_boxs {
@@ -480,7 +511,7 @@ label {
         width: 15%;
         position: relative;
       }
-      
+
       &.ex30 {
         width: 30%;
 
@@ -847,9 +878,6 @@ footer {
   background: linear-gradient(135deg, rgba(250,93,163,1) 0%,rgba(161,132,249,1) 55%,rgba(161,132,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa5da3', endColorstr='#a184f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-
-
-
 
 
 
