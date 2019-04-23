@@ -89,6 +89,7 @@ html {
     color: #555555;
     text-decoration: none;
     @include transition(all .3s);
+    font-weight: 600;
 
     &.otherMenu{
       padding-left: 30px;
@@ -381,6 +382,10 @@ label {
       margin-bottom: 0;
     }
 
+    &.noallP{
+      padding: 0;
+    }
+
     &.noPLR{
       padding: 10px 0;
     }
@@ -420,6 +425,38 @@ label {
         width: 100%;
       }
     }
+
+    .spentBoxs {
+      display: inline-block;
+      width: 100%;
+      padding: 10px;
+      @include clearfix();
+      
+      &.sdgray{
+        border-bottom: 1px solid rgba(225, 234, 239, 1.00);
+      }
+
+      &.sdbule {
+        border-bottom: 1px solid rgba(0, 182, 233, 1.00);
+      }
+
+      .tableBox20, .tableBox40 {
+        &.gray_tabletype {
+          color: rgba(121, 132, 140, 1.00);
+        }
+      }
+
+      .tableBox20 {
+        display: inline-block;
+        width: 20%;
+        float: left;
+      }
+      .tableBox40 {
+        display: inline-block;
+        width: 40%;
+        float: left;
+      }
+    }
   }
 }
 
@@ -439,6 +476,14 @@ label {
     color: #555555;
     border-bottom: 1px dotted rgba(225, 234, 239, 1.00);
 
+    &:before {
+      display: inline-block;
+      content: attr(title);
+      font-weight: 600;
+      color: rgba(0, 183, 234, 1.00);
+      padding-right: 5px;
+    }
+
     &.s_nobored {
       border-bottom: 0;
     }
@@ -448,6 +493,31 @@ label {
       width: 100%;
       font-size: 1rem;
       font-weight: 600;
+
+      &.ch01 {
+        width: calc(100% - 32px);
+        float: right;
+        font-weight: 400;
+        border-bottom: 1px dotted rgba(225, 234, 239, 1.00);
+        padding: 10px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+
+        &:before {
+          display: inline-block;
+          content: attr(title);
+          font-weight: 600;
+          color: #555555;
+          padding-right: 5px;
+        }
+      }
 
       &:before {
         display: inline-block;
@@ -486,12 +556,36 @@ label {
   }
 }
 
+.title_type {
+  display: inline-block;
+  width: 100%;
+  color: rgba(121, 132, 140, 1.00);
+
+  &:before {
+    display: inline-block;
+    content: '已消費金額：';
+    color: black;
+    margin: -2px 10px 0 0; 
+  }
+
+  &:after {
+    display: inline-block;
+    content: '元';
+    color: black;
+    margin: -2px 0 0 10px; 
+  }
+}
+
 .typetext {
   display: inline-block;
   width: 100%;
   font-size: 1rem;
   color: #555555;
   text-align: left;
+
+  &.bTitle {
+    font-weight: 600;
+  }
 
   &.storeTitle {
     color: rgba(0, 183, 234, 1.00);
@@ -517,8 +611,6 @@ label {
   }
 } 
 
-
-
 .noteOrange {
   display: inline-block;
   width: 100%;
@@ -526,6 +618,43 @@ label {
   color: rgba(228, 115, 9, 1.00);
   text-align: left;
   padding-top: 10px;
+}
+
+.eventNum {
+  display: inline-block;
+  width: calc(100% - 20px);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: right;
+  color: rgba(228, 115, 9, 1.00);
+  margin: 0 10px 10px 0;
+  padding-right: 25px;
+  position: relative;
+
+  &:after {
+    display: inline-block;
+    content: '點';
+    color: #555555;
+    font-size: .9rem;
+    bottom: 5px;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.eventime {
+  display: inline-block;
+  width: 100%;
+  color: rgba(157, 157, 157, 1.00);
+  font-size: .9rem;
+  margin-bottom: 10px;
+
+  &:before {
+    display: inline-block;
+    content: '\e906';
+    font-family: 'icomoon';
+    padding: 2px 5px 0 0;
+  }
 }
 // 文字・結束
 
@@ -544,6 +673,10 @@ label {
   &.span30 {
     margin: 30px 0;
   }
+
+  &.span15 {
+    padding: 0 10px;
+  }
 }
 
 a, button {
@@ -555,6 +688,11 @@ a, button {
   font-weight: 600;
   padding: 10px 0;
   text-align: center;
+
+  &.smallBtn {
+    font-size: .9rem;
+    padding: 8px 5px;
+  }
 
   &:hover {
     text-decoration: none;
