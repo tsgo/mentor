@@ -249,7 +249,21 @@ input {
     width: 70%;
     float: right;
   }
+
+  &.check {
+    float: left;
+    margin-bottom: 0; 
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
 }
+
 label {
   display: inline-block;
   width: 100%;
@@ -457,6 +471,34 @@ label {
         float: left;
       }
     }
+
+    .exchangeBoxs {
+      display: inline-block;
+      float: left;
+
+      &.ex15 {
+        width: 15%;
+        position: relative;
+      }
+      
+      &.ex30 {
+        width: 30%;
+
+        img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      &.ex55 {
+        width: 55%;
+      }
+
+      &.ex85 {
+        width: 85%
+      }
+
+    }
   }
 }
 
@@ -551,6 +593,10 @@ label {
     font-weight: 600;
   }
 
+  &.typeHavePL {
+    padding-left: 10px;
+  }
+
   &.typeHavePD {
     padding-bottom: 10px;
   }
@@ -594,6 +640,17 @@ label {
 
   &.havePLR {
     padding: 0 15px;
+  }
+
+  &.havePL {
+    padding-left: 10px;
+  }
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-weight: 600;
+    color: rgba(224, 103, 13, 1.00);
   }
 }
 
