@@ -13,14 +13,6 @@ $(function () {
   });
 
 
-  $('#bb1').click(function() {
-    // console.log('123');
-    $('.blackBoxs').toggleClass ('bboxshow');
-    $('.blackok').toggleClass ('bshow');
-  });
-
-
-
   // 手機選單模式，背景資訊鎖定
   function scrollLock () {
     var scrollPosition = [
