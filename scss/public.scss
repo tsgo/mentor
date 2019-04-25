@@ -54,102 +54,6 @@ html {
 }
 
 
-.lightbox-target {
-  /* 設定好背景層的樣式以及位置 */
-  position: fixed;
-  top: -100%;
-  width: 100%;
-  background: rgba(0,0,0,.7);
-
-  /* 預設透明度為 0，觸發 :target 後，利用動畫效果調整透明度 */
-  opacity: 0;
-  @include transition(opacity .5s ease-in-out);
-  overflow: hidden;
-  .content {
-    /* 設定內容的樣式及位置(白底區塊) */
-    width: 90%;
-    height: 90%;
-    background: #fff;
-    color: #333;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 3px solid #fff;
-    @include box-shadow(0 0 8px rgba(0,0,0,.3));
-    box-sizing: border-box;
-
-    /* 預設寬高為 0，觸發 :target 後，利用動畫效果展開寬與高 */
-    max-height: 0%;
-    max-width: 0%;
-    @include transition(.5s ease-in-out);
-  }
-  img {
-    /* 設定圖片的樣式及位置，利用 */
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 3px solid #fff;
-    @include box-shadow(0 0 8px rgba(0,0,0,.3));
-    box-sizing: border-box;
-
-    /* 預設寬高為 0，觸發 :target 後，利用動畫效果展開寬與高 */
-    max-height: 0%;
-    max-width: 0%;
-    @include transition(.5s ease-in-out);
-  }
-
-  /* 當 :target 觸發後，index-target 的透明度為 1；content &amp; img 的寬高為 100% */
-  &:target {
-    opacity: 1;
-    top: 0;
-    bottom: 0;
-    .content, img {
-      max-height: 100%;
-      max-width: 100%;
-    }
-    .lightbox-close {
-      top: 5%;
-    }
-  }
-}
-
-/* 關閉 Lightbox 按鈕的位置及樣式 */
-.lightbox-close {
-  display: block;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  background: #139dd7;
-  color: #fff;
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  @include transition(.5s ease-in-out);
-
-  /* 利用偽元素做出 \ 以及 / 的線條，合併就變成 X 囉 */
-  &:before, &:after {
-    content: " ";
-    display: block;
-    height: 30px;
-    width: 1px;
-    background: #fff;
-    position: absolute;
-    left: 26px;
-    top: 10px;
-    @include transform(rotate(45deg));
-  }
-  &:after {
-    @include transform(rotate(-45deg));
-  }
-}
-
-
 // 側選單・開始
 .menu_boxs {
   display: none;
@@ -357,6 +261,19 @@ input {
     top: -15px;
     left: 0;
   }
+
+  &.check02 {
+    float: left;
+    margin-bottom: 0; 
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    position: absolute;
+    top: -6px;
+    left: -4px;
+  }
 }
 
 label {
@@ -377,6 +294,12 @@ label {
   &.label30 {
     width: 30%;
     float: left;
+  }
+
+  &.label70 {
+    width: 95%;
+    float: right;
+    line-height: 25px;
   }
 }
 .input_boxs {
@@ -612,6 +535,8 @@ label {
     font-size: 1rem;
     color: #555555;
     border-bottom: 1px dotted rgba(225, 234, 239, 1.00);
+    position: relative;
+
 
     &:before {
       display: inline-block;
