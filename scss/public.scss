@@ -245,7 +245,7 @@ input {
   text-align: left;
 
   &.input70 {
-    width: 70%;
+    width: 65%;
     float: right;
   }
 
@@ -292,7 +292,7 @@ label {
   text-align: left;
 
   &.label30 {
-    width: 30%;
+    width: 35%;
     float: left;
   }
 
@@ -312,6 +312,10 @@ label {
   position: relative;
   outline: 0;
   border: 0;
+
+  &.inbox65 {
+    width: 65%;
+  }
 
   &.noarrow {
     &:after {
@@ -431,6 +435,7 @@ label {
       width: 50%;
       float: left;
       border: 1px solid rgba(187, 187, 187, .5);
+      background-color: #cccccc;
 
       img {
         display: inline-block;
