@@ -12,7 +12,6 @@ $(function () {
     $(this).next().toggleClass ('showMenu');
   });
 
-
   // 手機選單模式，背景資訊鎖定
   function scrollLock () {
     var scrollPosition = [
@@ -32,5 +31,16 @@ $(function () {
     $html.css('overflow', $html.data('previous-overflow'));
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
   }
+
+  // partner點選切換tab
+  $('.record_tag').click(function() {
+  $('.record_tag').removeClass ('h');
+  $(this).addClass ('h');
+
+  $('.partnersbox').removeClass('partnershow');
+  $('.partnersbox').eq($(this).index()).addClass('partnershow');
+ });
+
+ $('record_tag').eq (0).click();
 
 });

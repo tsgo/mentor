@@ -285,7 +285,7 @@ label {
   padding: 0 0 0 5.33333vw;
   background-color: #fff;
   font-size: 1rem;
-  line-height: 45px;
+  line-height: 6.97674vh;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -315,6 +315,7 @@ label {
 
   &.inbox65 {
     width: 65%;
+    float: left;
   }
 
   &.noarrow {
@@ -523,6 +524,47 @@ label {
 
     }
   }
+
+  .record_boxs {
+    display: inline-block;
+    width: 100%;
+
+    .record_tag {
+      display: inline-block;
+      width: 50%;
+      float: left;
+      padding: 10px;
+      background-color: rgba(124, 124, 124, .5);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &:hover {
+        background-color: rgba(246, 84, 169, 1.00);
+      }
+
+      &.h {
+        background-color: rgba(246, 84, 169, 1.00);
+      }
+    }
+  }
+
+  // partners
+  .partnersbox {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    @include clearfix();
+
+    // 控制按鈕分頁，設定預設值是沒有顯示
+    display: none;
+
+    &.partnershow {
+      display: inline-block;
+    }
+  }
 }
 
 
@@ -531,6 +573,10 @@ label {
   display: inline-block;
   width: 100%;
   padding: 0 15px;
+
+  &.store_no {
+    padding: 0;
+  }
 
   .storeBox {
     display: inline-block;
