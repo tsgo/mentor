@@ -407,7 +407,7 @@ label {
     display: inline-block;
     width: 100%;
     background-color: white;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px 15px;
     @include clearfix();
 
@@ -671,6 +671,14 @@ label {
   &.typeHavePD {
     padding-bottom: 10px;
   }
+
+  &.typeHavePT {
+    padding-top: 10px;
+  }
+
+  &.typeHaveBore {
+    border-bottom: 1px dotted #e1eaef;
+  }
 }
 
 .title_type {
@@ -704,6 +712,11 @@ label {
     font-weight: 600;
   }
 
+  &.BB {
+    color: #00b7ea;
+    font-size: 1.1rem;
+  }
+
   &.storeTitle {
     color: rgba(0, 183, 234, 1.00);
     font-weight: 600;
@@ -715,6 +728,10 @@ label {
 
   &.havePL {
     padding-left: 10px;
+  }
+
+  &.havePB {
+    padding-bottom: 10px;
   }
 
   &:before {
