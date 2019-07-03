@@ -324,6 +324,10 @@ label {
     }
   }
 
+  &.inDown30 {
+    margin-bottom: 30px;
+  }
+
   &:after {
     display: inline-block;
     content: '\e90a';
